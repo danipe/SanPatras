@@ -6,12 +6,12 @@ public class Principal {
 	static ArrayList<String> pacientes = new ArrayList<String>();
 	//Llamamos a las otras clases
 	Ingresos i = new Ingresos();
-	Medicos m = new Medicos();
+	
 	Pacientes p = new Pacientes();
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		Medico m = new Medico(0);
 	}
 
 }
