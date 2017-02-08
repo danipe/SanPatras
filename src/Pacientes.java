@@ -8,9 +8,8 @@ public class Pacientes {
 	private int cpPaciente;
 	private int telefPaciente;
 	private String fechaNacimientoPaciente;
-	/*
-	 * Constructor
-	 */
+
+	
 	public Pacientes(){
 		this.codPaciente = 0;
 		this.nombrePaciente = "";
