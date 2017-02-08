@@ -6,12 +6,13 @@ public class Principal {
 	static ArrayList<String> medicos = new ArrayList<String>();
 	static ArrayList<String> pacientes = new ArrayList<String>();
 	//Llamamos a las otras clases
-	Ingreso i = new Ingreso();
-	Paciente p = new Paciente();
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Medico m = new Medico(0);
+		Ingreso i = new Ingreso(0);
+		Paciente p = new Paciente(0);
 	}
 	
 	/**

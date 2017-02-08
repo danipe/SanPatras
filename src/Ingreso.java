@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Ingreso {
 	private int codIngreso;
 	private int codMedico;
@@ -6,13 +8,14 @@ public class Ingreso {
 	private int numCama;
 	private String fechaIngreso;
 
-	public Ingreso(){
-		this.codIngreso = 0;
-		this.codMedico = 0;
-		this.codPaciente = 0;
-		this.numHabitacion = "";
-		this.numCama = 0;
-		this.fechaIngreso = "";
+	public Ingreso(int codigo){
+		this.setCodPaciente();
+		this.setCodMedico();
+		this.setNumHabitacion();
+		this.setNumCama();
+		this.setFechaIngreso();
+		this.setCodIngreso(codigo);
+		
 	}
 
 	/*
@@ -22,47 +25,62 @@ public class Ingreso {
 		return codIngreso;
 	}
 
-	public void setCodIngreso(int codIngreso) {
-		this.codIngreso = codIngreso;
+	public void setCodIngreso(int codigo) {
+		this.codIngreso=codigo;
 	}
 
 	public int getCodMedico() {
 		return codMedico;
 	}
 
-	public void setCodMedico(int codMedico) {
-		this.codMedico = codMedico;
+	public void setCodMedico() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Introduce el codigo del medico para el ingreso");
+		System.out.print(">");
+		this.codMedico = sc.nextInt();
 	}
 
 	public int getCodPaciente() {
 		return codPaciente;
 	}
 
-	public void setCodPaciente(int codPaciente) {
-		this.codPaciente = codPaciente;
+	public void setCodPaciente() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Introduce el codigo del paciente para el ingreso");
+		System.out.print(">");
+		this.codPaciente = sc.nextInt();
 	}
 
 	public String getNumHabitacion() {
 		return numHabitacion;
 	}
 
-	public void setNumHabitacion(String numHabitacion) {
-		this.numHabitacion = numHabitacion;
+	public void setNumHabitacion() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Introduce el numero de habitacion para el ingreso");
+		System.out.print(">");
+		this.numHabitacion = sc.nextLine();
 	}
 
 	public int getNumCama() {
 		return numCama;
 	}
 
-	public void setNumCama(int numCama) {
-		this.numCama = numCama;
+	public void setNumCama() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Introduce el numero de cama para el ingreso");
+		System.out.print(">");
+		this.numCama = sc.nextInt();
 	}
 
 	public String getFechaIngreso() {
 		return fechaIngreso;
 	}
 	
-	public void setFechaIngreso(String fechaIngreso) {
-		this.fechaIngreso = fechaIngreso;
+	public void setFechaIngreso() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Introduce la fecha de ingreso");
+		System.out.print(">");
+		this.fechaIngreso = sc.nextLine();
 	}	
 }
