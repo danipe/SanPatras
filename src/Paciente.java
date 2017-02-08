@@ -1,4 +1,4 @@
-public class Pacientes {
+public class Paciente {
 	
 	private String nombrePaciente;
 	private String apedilloPaciente;
@@ -10,7 +10,7 @@ public class Pacientes {
 	private String fechaNacimientoPaciente;
 
 	
-	public Pacientes(){
+	public Paciente(){
 		this.codPaciente = 0;
 		this.nombrePaciente = "";
 		this.apedilloPaciente = "";

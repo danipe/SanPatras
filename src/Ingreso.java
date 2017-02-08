@@ -1,4 +1,4 @@
-public class Ingresos {
+public class Ingreso {
 	private int codIngreso;
 	private int codMedico;
 	private int codPaciente;
@@ -6,7 +6,7 @@ public class Ingresos {
 	private int numCama;
 	private String fechaIngreso;
 
-	public Ingresos(){
+	public Ingreso(){
 		this.codIngreso = 0;
 		this.codMedico = 0;
 		this.codPaciente = 0;
