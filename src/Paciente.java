@@ -9,7 +9,7 @@ public class Paciente {
 	private String poblacionPaciente;
 	private String provinciaPaciente;
 	private int cpPaciente;
-	private int telefPaciente;
+	private String telefPaciente;
 	private String fechaNacimientoPaciente;
 
 	
@@ -22,8 +22,7 @@ public class Paciente {
 		this.setProvinciaPaciente();
 		this.setDireccionPaciente();
 		this.setCpPaciente();
-		this.setCodPaciente(codigo);
-		
+		this.setCodPaciente(codigo);		
 	}
 	
 	/*
@@ -79,7 +78,7 @@ public class Paciente {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Introduce la provincia del paciente");
 		System.out.print(">");
-		this.provinciaPaciente = provinciaPaciente;
+		this.provinciaPaciente = sc.nextLine();
 	}
 
 	public int getCpPaciente() {
@@ -93,15 +92,15 @@ public class Paciente {
 		this.cpPaciente = sc.nextInt();
 	}
 
-	public int getTelefPaciente() {
+	public String getTelefPaciente() {
 		return telefPaciente;
 	}
 
 	public void setTelefPaciente() {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Introduce los apellidos del paciente");
+		System.out.println("Introduce el telefono del paciente");
 		System.out.print(">");
-		this.telefPaciente = sc.nextInt();
+		this.telefPaciente = sc.nextLine();
 	}
 
 	public String getFechaNacimientoPaciente() {
