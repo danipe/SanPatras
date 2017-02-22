@@ -20,16 +20,16 @@ public class Principal {
 	//MENÚ INSERTAR
 	public static int menuInsertar(){
 		Scanner menu = new Scanner(System.in);
-		System.out.println("-------------------------");
+		limpiar(25);
         System.out.println("Elige una de estas opciones: ");
-        System.out.println("-------------------------");
+        limpiar(25);
         System.out.println("1 - Insertar paciente");
         System.out.println("2 - Insertar medico");
         System.out.println("3 - Insertar ingreso");
         System.out.println("4 - Salir");
 		System.out.print(">");
 		int opcion = menu.nextInt();
-		System.out.println("-------------------------");
+		limpiar(25);
 		return opcion;
 	}
 	public static void bucleMenuInsertar(){
@@ -58,16 +58,16 @@ public class Principal {
 	//MENÚ MOSTRAR
 	public static int menuMostrar(){
 		Scanner menu = new Scanner(System.in);
-		System.out.println("-------------------------");
+		limpiar(25);
         System.out.println("Elige una de estas opciones: ");
-        System.out.println("-------------------------");
+        limpiar(25);
         System.out.println("1 - Mostar pacientes");
         System.out.println("2 - Mostar medicos");
         System.out.println("3 - Mostar ingresos");
         System.out.println("4 - Salir");
 		System.out.print(">");
 		int opcion = menu.nextInt();
-		System.out.println("-------------------------");
+		limpiar(25);
 		return opcion;
 	}
 	public static void bucleMenuMostrar(){
@@ -76,34 +76,46 @@ public class Principal {
 			op=menuMostrar();
 			switch(op){
 			case 1:
-				for(Paciente paciente : pacientes){
-					System.out.println("Codigo paciente: "+paciente.getCodPaciente());
-					System.out.println("Nombre paciente: "+paciente.getNombrePaciente());
-					System.out.println("Apellidos paciente: "+paciente.getApedilloPaciente());
-					System.out.println("Fecha nacimiento paciente: "+paciente.getFechaNacimientoPaciente());
-					System.out.println("Telefono paciente: "+paciente.getTelefPaciente());
-					System.out.println("");
+				if (pacientes.size() != 0){
+					for(Paciente paciente : pacientes){
+						System.out.println("Codigo paciente: "+paciente.getCodPaciente());
+						System.out.println("Nombre paciente: "+paciente.getNombrePaciente());
+						System.out.println("Apellidos paciente: "+paciente.getApedilloPaciente());
+						System.out.println("Fecha nacimiento paciente: "+paciente.getFechaNacimientoPaciente());
+						System.out.println("Telefono paciente: "+paciente.getTelefPaciente());
+						System.out.println("");
+					}
+				}	else	{
+					System.out.println("No hay pacientes registrados");
 				}
 				break;
 			case 2: 
-				for(Medico medico: medicos){
-					System.out.println("Codigo medico: "+medico.getCodigoMedico());
-					System.out.println("Nombre medico: "+medico.getNombre());
-					System.out.println("Apellidos medico: "+medico.getApellidos());
-					System.out.println("Especialidad medico: "+medico.getEspecialidad());
-					System.out.println("Telefono medico: "+medico.getTelefono());
-					System.out.println("");
+				if (medicos.size() != 0){
+					for(Medico medico: medicos){
+						System.out.println("Codigo medico: "+medico.getCodigoMedico());
+						System.out.println("Nombre medico: "+medico.getNombre());
+						System.out.println("Apellidos medico: "+medico.getApellidos());
+						System.out.println("Especialidad medico: "+medico.getEspecialidad());
+						System.out.println("Telefono medico: "+medico.getTelefono());
+						System.out.println("");
+					}
+				}	else	{
+					System.out.println("No hay medicos registrados");
 				}
 				break;
 			case 3:
-				for(Ingreso ingreso: ingresos){
-					System.out.println("Codigo ingreso: "+ingreso.getCodIngreso());
-					System.out.println("Paciente ingreso: "+ingreso.getCodPaciente());
-					System.out.println("Medico ingreso: "+ingreso.getCodMedico());
-					System.out.println("Habitacion ingreso: "+ingreso.getNumHabitacion());
-					System.out.println("Cama ingreso: "+ingreso.getNumCama());
-					System.out.println("Fecha ingreso: "+ingreso.getFechaIngreso());
-					System.out.println("");
+				if (ingresos.size() != 0){
+					for(Ingreso ingreso: ingresos){
+						System.out.println("Codigo ingreso: "+ingreso.getCodIngreso());
+						System.out.println("Paciente ingreso: "+ingreso.getCodPaciente());
+						System.out.println("Medico ingreso: "+ingreso.getCodMedico());
+						System.out.println("Habitacion ingreso: "+ingreso.getNumHabitacion());
+						System.out.println("Cama ingreso: "+ingreso.getNumCama());
+						System.out.println("Fecha ingreso: "+ingreso.getFechaIngreso());
+						System.out.println("");
+					}
+				}	else	{
+					System.out.println("No se ha realizado ningun ingreso");
 				}
 				break;
 			case 4:
@@ -119,16 +131,16 @@ public class Principal {
 	//MENÚ MODIFICAR
 	public static int menuModificar(){
 		Scanner menu = new Scanner(System.in);
-		System.out.println("-------------------------");
+		limpiar(25);
         System.out.println("Elige una de estas opciones: ");
-        System.out.println("-------------------------");
+        limpiar(25);
         System.out.println("1 - Modificar paciente");
         System.out.println("2 - Modificar medico");
         System.out.println("3 - Modificar ingreso");
         System.out.println("4 - Salir");
 		System.out.print(">");
 		int opcion = menu.nextInt();
-		System.out.println("-------------------------");
+		limpiar(25);
 		return opcion;
 	}
 	public static void bucleMenuModificar(){
@@ -157,16 +169,16 @@ public class Principal {
 	//ELIMINAR
 	public static int menuEliminar(){
 		Scanner menu = new Scanner(System.in);
-		System.out.println("-------------------------");
+		limpiar(25);
         System.out.println("Elige una de estas opciones: ");
-        System.out.println("-------------------------");
+        limpiar(25);
         System.out.println("1 - Borrar paciente");
         System.out.println("2 - Borrar medico");
         System.out.println("3 - Borrar ingreso");
         System.out.println("4 - Salir");
 		System.out.print(">");
 		int opcion = menu.nextInt();
-		System.out.println("-------------------------");
+		limpiar(25);
 		return opcion;
 	}
 	public static void bucleMenuEliminar(){
@@ -248,9 +260,9 @@ public class Principal {
 	//MENÚ
 	public static int menu(){
 		Scanner menu = new Scanner(System.in);
-		System.out.println("-------------------------");
+		limpiar(25);
         System.out.println("Elige una de estas opciones: ");
-        System.out.println("-------------------------");
+        limpiar(25);
         System.out.println("1 - Insertar");
         System.out.println("2 - Mostrar");
         System.out.println("3 - Modificar");
@@ -258,7 +270,7 @@ public class Principal {
         System.out.println("5 - Salir");
 		System.out.print(">");
 		int opcion = menu.nextInt();
-		System.out.println("-------------------------");
+		limpiar(25);
 		return opcion;
 	}
 	public static void bucleMenu(){
@@ -284,6 +296,15 @@ public class Principal {
 				System.out.println("Introduce un numero válido");
 			}
 		}while(op!=5);
+	}
+	
+	
+	//Genera fila de lineas para dar una mejor estetica
+	public static void limpiar(int rayas){
+		for (int i=0; i<rayas; i++){
+			System.out.print("-");
+		}
+		System.out.println("");
 	}
 
 }
