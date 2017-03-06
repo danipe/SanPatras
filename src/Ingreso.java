@@ -9,12 +9,12 @@ public class Ingreso {
 	private String fechaIngreso;
 
 	public Ingreso(int codigo){
-		this.setCodPaciente();
-		this.setCodMedico();
-		this.setNumHabitacion();
-		this.setNumCama();
-		this.setFechaIngreso();
-		this.setCodIngreso(codigo);
+		setCodPaciente();
+		setCodMedico();
+		setNumHabitacion();
+		setNumCama();
+		setFechaIngreso();
+		setCodIngreso(codigo);
 		
 	}
 
