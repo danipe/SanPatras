@@ -7,9 +7,12 @@ public class Principal {
 	static ArrayList<Paciente> pacientes = new ArrayList<Paciente>();
 	//Llamamos a las otras clases
 	
+	//Prepara fichero diseÃ±o
+	static estetica ds = new estetica();
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		ds.titulo();
 		bucleMenu();
 	}
 	
@@ -17,19 +20,19 @@ public class Principal {
 	 * Menu para elegir la opciÃ³n al usuario 
 	 * @return la opcion del usuario
 	 */
-	//MENÚ INSERTAR
+	//MENï¿½ INSERTAR
 	public static int menuInsertar(){
 		Scanner menu = new Scanner(System.in);
-		limpiar(25);
+		ds.limpiarln(25);
         System.out.println("Elige una de estas opciones: ");
-        limpiar(25);
+        ds.limpiarln(25);
         System.out.println("1 - Insertar paciente");
         System.out.println("2 - Insertar medico");
         System.out.println("3 - Insertar ingreso");
         System.out.println("4 - Salir");
 		System.out.print(">");
 		int opcion = menu.nextInt();
-		limpiar(25);
+		ds.limpiarln(25);
 		return opcion;
 	}
 	public static void bucleMenuInsertar(){
@@ -50,24 +53,24 @@ public class Principal {
 				
 				break;
 			default:
-				System.out.println("Introduce un numero válido");
+				System.out.println("Introduce un numero vï¿½lido");
 			}
 		}while(op!=4);
 	}
 	
-	//MENÚ MOSTRAR
+	//MENï¿½ MOSTRAR
 	public static int menuMostrar(){
 		Scanner menu = new Scanner(System.in);
-		limpiar(25);
+		ds.limpiarln(25);
         System.out.println("Elige una de estas opciones: ");
-        limpiar(25);
+        ds.limpiarln(25);
         System.out.println("1 - Mostar pacientes");
         System.out.println("2 - Mostar medicos");
         System.out.println("3 - Mostar ingresos");
         System.out.println("4 - Salir");
 		System.out.print(">");
 		int opcion = menu.nextInt();
-		limpiar(25);
+		ds.limpiarln(25);
 		return opcion;
 	}
 	public static void bucleMenuMostrar(){
@@ -119,28 +122,28 @@ public class Principal {
 				}
 				break;
 			case 4:
-				System.out.println("Hasta la próxima");
+				System.out.println("Hasta la prï¿½xima");
 				break;
 			default:
-				System.out.println("Introduce un numero válido");
+				System.out.println("Introduce un numero vï¿½lido");
 			}
 		}while(op!=4);
 	}
 	
 	
-	//MENÚ MODIFICAR
+	//MENï¿½ MODIFICAR
 	public static int menuModificar(){
 		Scanner menu = new Scanner(System.in);
-		limpiar(25);
+		ds.limpiarln(25);
         System.out.println("Elige una de estas opciones: ");
-        limpiar(25);
+        ds.limpiarln(25);
         System.out.println("1 - Modificar paciente");
         System.out.println("2 - Modificar medico");
         System.out.println("3 - Modificar ingreso");
         System.out.println("4 - Salir");
 		System.out.print(">");
 		int opcion = menu.nextInt();
-		limpiar(25);
+		ds.limpiarln(25);
 		return opcion;
 	}
 	public static void bucleMenuModificar(){
@@ -162,23 +165,23 @@ public class Principal {
 				
 				break;
 			default:
-				System.out.println("Introduce un numero válido");
+				System.out.println("Introduce un numero vï¿½lido");
 			}
 		}while(op!=4);
 	}
 	//ELIMINAR
 	public static int menuEliminar(){
 		Scanner menu = new Scanner(System.in);
-		limpiar(25);
+		ds.limpiarln(25);
         System.out.println("Elige una de estas opciones: ");
-        limpiar(25);
+        ds.limpiarln(25);
         System.out.println("1 - Borrar paciente");
         System.out.println("2 - Borrar medico");
         System.out.println("3 - Borrar ingreso");
         System.out.println("4 - Salir");
 		System.out.print(">");
 		int opcion = menu.nextInt();
-		limpiar(25);
+		ds.limpiarln(25);
 		return opcion;
 	}
 	public static void bucleMenuEliminar(){
@@ -251,18 +254,18 @@ public class Principal {
 				
 				break;
 			default:
-				System.out.println("Introduce un numero válido");
+				System.out.println("Introduce un numero vï¿½lido");
 			}
 		}while(op!=4);
 	}
 	
 	
-	//MENÚ
+	//MENï¿½
 	public static int menu(){
 		Scanner menu = new Scanner(System.in);
-		limpiar(25);
+		ds.limpiarln(25);
         System.out.println("Elige una de estas opciones: ");
-        limpiar(25);
+        ds.limpiarln(25);
         System.out.println("1 - Insertar");
         System.out.println("2 - Mostrar");
         System.out.println("3 - Modificar");
@@ -270,7 +273,7 @@ public class Principal {
         System.out.println("5 - Salir");
 		System.out.print(">");
 		int opcion = menu.nextInt();
-		limpiar(25);
+		ds.limpiarln(25);
 		return opcion;
 	}
 	public static void bucleMenu(){
@@ -290,21 +293,12 @@ public class Principal {
 			case 4:bucleMenuEliminar();
 				break;
 			case 5:
-				System.out.println("Hasta la próxima");
+				System.out.println("Hasta la prï¿½xima");
 				break;
 			default:
-				System.out.println("Introduce un numero válido");
+				System.out.println("Introduce un numero vï¿½lido");
 			}
 		}while(op!=5);
-	}
-	
-	
-	//Genera fila de lineas para dar una mejor estetica
-	public static void limpiar(int rayas){
-		for (int i=0; i<rayas; i++){
-			System.out.print("-");
-		}
-		System.out.println("");
 	}
 
 }
